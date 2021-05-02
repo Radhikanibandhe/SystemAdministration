@@ -1,0 +1,20 @@
+Linux File System:
+In Linux, all the filesystems are part of a single directory tree. The main file system is referred to as root (/) filesystem. 
+
+Following are the important commands were taught during the training:
+1. pwd: This command tells us about the present working directory. This gives the complete path of the current working directory.
+        ex: $ pwd  
+            /home/user     (Output)
+   
+2. cd: cd stands for change directory. This command is used to change the current working directory.
+       ex: $ cd dir
+             /home/user/dir    (This will be new working directory)
+             
+3. touch: This command creates new empty file in the current working directory.
+          ex: $touch file.txt
+          
+4. cat: cat is short for concatenate. This command can be used to show and create files. Also some input can be appended at the end of the file using this command.
+        ex: cat file.txt  (This will show the contents of file.txt file)
+            cat > file.txt (This will create a new file with name file.txt)
+            cat >> file.txt
+            Hello World!!    (Hello World!! will get appended at the end of the file)
