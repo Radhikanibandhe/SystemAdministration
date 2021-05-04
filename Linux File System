@@ -34,9 +34,32 @@ Following are the important and basic commands were taught during the training:
          
 9. rm: This command is used to remove a file.
          ex: $ rm file.txt
+             $ rm -r parent (deletes all the files and sub-directories recursively of the parent directory)
          
 10. cp: cp stands for copy. This command cpoies the contents of a file to another file.
          ex: $ cp first.txt second.txt    (The contents of file first.txt will get copied to second.txt)
+             $ cp -r olddir newdir        (Copies the contents of olddir recursively into newdir)
          
 11. man: This command used to display the manual of any command. This providesthe description of the command specified.
          ex: $ man rmdir
+         
+12. ls : ls stands for list. This commands lists the contents of a directory.
+         ex: $ ls
+         
+13. mv: mv stands for move. This command moves the contents of one directory to another.
+         ex: $ mv one two (contents of one will be moved to two)
+         
+14. head: head command prints top N lines of a file. By default it prints first 10 lines.
+         ex: $ head file.txt
+         
+15. tail: tail command prints last N lines of the file. By default it prints last 10 lines.
+         ex: $ tail file.txt
+         
+16. ping: ping command is a simple utility used to check whether a network is available and if a host is reachable.
+         ex: $ ping 8.8.8.8 (8.8.8.8 is address of google server)
+         
+17. uname: This command prints the system information.
+         ex: $ uname
+         
+18. top: This command is used to display information about CPU and memory utilization.
+         ex: top -n 10
