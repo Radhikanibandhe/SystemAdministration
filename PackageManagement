@@ -1,0 +1,31 @@
+Package management is a method of installing and maintaining (which includes updating and probably removing as well) software on the system.
+
+In the early days of Linux, programs were only distributed as source code, along with the required man pages, the necessary configuration files, 
+and more. Nowadays, most Linux distributors use by default pre-built programs or sets of programs called packages, 
+which are presented to users ready for installation on that distribution.
+
+**Working of Package Management System**
+                  If a certain package requires a certain resource such as a shared library, or another package, it is said to have a dependency. All modern package 
+                  management systems provide some method of dependency resolution to ensure that when a package is installed, all of its dependencies are installed as well.
+                  
+In order to perform the task of package management effectively, we have two types of available utilities:
+
+Low-level Package tool: 
+                  These are tools which handle in the backend the actual installation, upgrade, and removal of package files
+
+High-level Package tool:
+                  These are tools which are in charge of ensuring that the tasks of dependency resolution and metadata searching -”data about the data”- are performed
+                  
+    DISTRIBUTION	          LOW-LEVEL TOOL	    HIGH-LEVEL TOOL
+    
+Debian and derivatives	       dpkg	               apt-get
+       CentOS	                 rpm	                 yum
+       
+1. dpkg: It is a low-level package manager for Debian-based systems. It can install, remove, provide information about and build *.deb packages but it can’t automatically 
+        download and install their corresponding dependencies.
+        
+2. apt-get: It is a high-level package manager for Debian and derivatives, and provides a simple way to retrieve and install packages, including dependency resolution, 
+            from multiple sources using the command line. Unlike dpkg, apt-get does not work directly with *.deb files, but with the package proper name.
+            
+3. rpm: It is the package management system used by Linux Standard Base (LSB)-compliant distributions for low-level handling of packages. Just like dpkg, it can query,
+        install, verify, upgrade, and remove packages, and is more frequently used by Fedora-based distributions, such as RHEL and CentOS.
