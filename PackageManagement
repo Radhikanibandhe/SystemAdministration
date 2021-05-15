@@ -29,3 +29,43 @@ Debian and derivatives	       dpkg	               apt-get
             
 3. rpm: It is the package management system used by Linux Standard Base (LSB)-compliant distributions for low-level handling of packages. Just like dpkg, it can query,
         install, verify, upgrade, and remove packages, and is more frequently used by Fedora-based distributions, such as RHEL and CentOS.
+        
+4. yum: It adds the functionality of automatic updates and package management with dependency management to RPM-based systems. As a high-level tool, like apt-get or 
+        aptitude, yum works with repositories.
+        
+***Working with yum***
+
+            - YUM (Yellowdog Updater Modified) is an open source command-line as well as graphical based package management tool for RPM (RedHat Package Manager) based 
+              Linux systems. It allows users and system administrator to easily install, update, remove or search software packages on a systems.
+            
+            - To install package with yum:
+                  ex: $ yum install httpd 
+                      (This installs Apache Web server on your system.)
+                  If you want to install packages automatically without asking any confirmation, use option -y 
+                  ex: $ yum -y install httpd
+                      
+            - To remove a package completely with their all dependencies:
+                  ex: $ yum remove httpd
+                      (This removes Apache Web Server with all its dependencies)
+                  To disable confirmation prompt just add option -y
+                  ex: $ tum -y remove httpd
+                  
+            - To update packages with yum:
+                  ex: $ yum update httpd
+                      (This updates Apache Web Server package)
+                  
+            - To get information of Package using yum;
+                  ex: $ yum info httpd
+                      (This gives all the information about Apache Web Server)
+                      
+            - To check for available updates:
+                  ex: $ yum check-update
+                  
+            - To update System:
+                  ex: $ yum update
+                  
+            - To view all the past transactions of yum command:
+                  ex: $ yum history
+                  
+            - To undo a yum install:
+                  ex: $ yum history undo
