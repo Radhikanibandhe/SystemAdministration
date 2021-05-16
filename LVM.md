@@ -38,7 +38,7 @@ File systems are built on top of logical volumes. The command mkfs can be used t
       xfs
       2048s
       x%
-      flag set ->set 1
+      set 1
       LVM
       on
       p
