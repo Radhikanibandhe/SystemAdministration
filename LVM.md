@@ -29,7 +29,7 @@ File systems are built on top of logical volumes. The command mkfs can be used t
      
 2.Label a partition:
      parted / dev /vdb mklabel msdos 
-     parted -l 
+     
      
 3.Use mkpart to make a partition:
       parted /dev /vdb
@@ -47,19 +47,21 @@ File systems are built on top of logical volumes. The command mkfs can be used t
       quit 
       pvcreate /dev/vdb1 /dev/vdc1 
       vgcreate servervg/dev/vdb1 /dev/vdc1
-      vgdisplay
       
 5. To display vg:
       vgdisplay
       
-6. Attach the file system to the partition:
+6. To create lvm:
+      lvcreate -n serverlv -L 10G servervg
+      
+7. Attach the file system to the partition:
       mkfs. xFs /dev/servervg/serverlv
       
-7. Create a mount point directory:
+8. Create a mount point directory:
       df-h 
       mkdir / archive
       
-8. Add entry in fstab:
+9. Add entry in fstab:
       cat/etc/fstab
       vi/etc/fstab
       lsblk -- fs / dev / vdb
